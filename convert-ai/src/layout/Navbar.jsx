@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react' // Add useEffect import
 import { Link } from 'react-router-dom'
 import assets from '../assets/assets.js'
-import { motion } from "framer-motion";
+import { motion ,useScroll, useMotionValueEvent} from "framer-motion";
 import { IoChevronDownOutline,IoClipboardOutline } from "react-icons/io5";
 import { FaRegEdit } from "react-icons/fa";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
@@ -26,7 +26,22 @@ import { BsChatDots } from "react-icons/bs";
 
 const Navbar = () => {
    const [isOpen, setIsOpen] = useState(false);
+   const [hidden, setHidden] = useState(false);
+const { scrollY } = useScroll();
+
+useMotionValueEvent(scrollY, "change", (current) => {
+  const previous = scrollY.getPrevious() || 0;
+  if (current > previous && current > 80) {
+    
+    setHidden(true);
+  } else {
+    setHidden(false);
+  }
+});
+
    
+
+
 
 
 const menuItems = [
@@ -89,9 +104,18 @@ const menuItems = [
     open: { height: "100vh", paddingBlock: '20px', transition: { duration: 0.3 } },
     closed: { height: 0, paddingBlock: '0px', transition: { duration: 0.3 } },
   };
+  const navVariants = {
+  visible: { y: 0 },
+  hidden: { y: "-100%" },
+};
+
 
   return (
-    <div className=' bg-white-1 lg:border-b lg:border-b-black-2/20'>
+    <motion.div   
+    variants={navVariants}
+  animate={hidden ? "hidden" : "visible"}
+  transition={{ duration: 0.35, ease: "easeOut" }}
+  className="bg-white-1 lg:border-b lg:border-b-black-2/20 sticky top-0 z-50">
       <div className="grid border-b border-black-1 max-w-7xl mx-auto lg:border-0 lg:px-7.5 lg:py-3 lg:flex lg:items-center lg:justify-between">
       <div className="flex items-center justify-between px-5 py-4 lg:p-0">
         <Link to='/' className="flex items-center gap-1">
@@ -153,12 +177,12 @@ const menuItems = [
             <div className=" flex items-center gap-1 cursor-pointer group px-3 rounded-[99px] py-2 transition-all duration-300 ease-in hover:bg-primary-hover">
               <p>All pages</p>
               <IoChevronDownOutline className='text-xl transition-all duration-150 ease-in-out group-hover:scale-y-[-1]' />
-              <div className="bg-white-1 p-5 w-[500px] absolute top-[130%] right-0 opacity-0 group-hover:opacity-100  grid grid-cols-2 items-start gap-x-4 gap-y-1 text-black-2 text-lg border-gray-3 border rounded-xl">
+              <div className="bg-white-1 p-5 w-[500px] absolute top-[130%] right-0 opacity-0 group-hover:opacity-100  grid grid-cols-2 items-start gap-x-4 text-black-2 text-lg border-gray-3 border rounded-xl">
                 {menuItems.map((item, index) => (
           <Link
             key={index}
             to={item.route}
-            className="flex items-center gap-3   group/link  px-3 rounded-[99px] py-2 transition-all duration-300 ease-in hover:bg-primary-hover"
+            className="flex items-center gap-3   group/link  px-3 rounded-[99px] py-1.5 transition-all duration-300 ease-in hover:bg-primary-hover"
           >
             
             <item.icon className="text-primary text-xl shrink-0" />
@@ -177,7 +201,7 @@ const menuItems = [
         </div>
       </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

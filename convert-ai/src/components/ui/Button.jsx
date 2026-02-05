@@ -39,7 +39,7 @@ const Button = ({
     <Link 
       to={to}
       className={`
-        px-5 py-2 text-center rounded-lg text-[16px] font-medium 
+        px-5 py-1.5 text-center rounded-lg text-[16px] lg:text-[18px] font-medium 
         overflow-hidden transition-all duration-200
         ${variantStyles[variant]}
         ${shadowStyle}
