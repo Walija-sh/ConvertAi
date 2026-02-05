@@ -4,7 +4,7 @@ import HomeHero from '../components/Home/HomeHero'
 const Home = () => {
   return (
     <div className=''>
-      <HomeHero/>
+      {/* <HomeHero/> */}
     </div>
   )
 }

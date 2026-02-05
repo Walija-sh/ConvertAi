@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react' 
 import { Link } from 'react-router-dom'
-import assets from './../assets/images/assets.js'
+// import assets from './../assets/images/assets.js'
 import { motion ,useScroll, useMotionValueEvent} from "motion/react";
 import { IoChevronDownOutline,IoClipboardOutline } from "react-icons/io5";
 import { FaRegEdit } from "react-icons/fa";
@@ -175,7 +175,7 @@ const Navbar = () => {
       <div className="grid border-b border-black-1 max-w-7xl mx-auto lg:border-0 lg:px-7.5 lg:py-3 lg:flex lg:items-center lg:justify-between">
         <div className="flex items-center justify-between px-5 py-4 lg:p-0">
           <Link to='/' className="flex items-center gap-1">
-            <img src={assets.logo} alt="" className='max-w-8' />
+            {/* <img src={assets.logo} alt="" className='max-w-8' /> */}
             <p className='text-black text-xl font-medium'>Convert</p>
           </Link>
           
