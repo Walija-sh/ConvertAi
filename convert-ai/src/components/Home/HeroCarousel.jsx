@@ -1,5 +1,5 @@
 import React from "react";
-import assets from "../../assets/images/assets.js";
+import assets from "./../../assets/images/assets.js";
 import { motion } from "motion/react";
 
 const HeroCarousel = () => {
