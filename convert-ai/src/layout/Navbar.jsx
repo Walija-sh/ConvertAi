@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react' 
 import { Link } from 'react-router-dom'
-import assets from '../assets/assets.js'
+import assets from '../assets/images/assets.js'
 import { motion ,useScroll, useMotionValueEvent} from "motion/react";
 import { IoChevronDownOutline,IoClipboardOutline } from "react-icons/io5";
 import { FaRegEdit } from "react-icons/fa";
