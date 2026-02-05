@@ -54,12 +54,17 @@ useEffect(() => {
   return (
     <section 
       ref={containerRef}
-      className='max-w-5xl mx-auto pt-[80px] pb-[20px] px-5 md:pt-[132px] md:pb-[30px] md:px-8 text-center flex flex-col items-center gap-8 relative'
+      className='max-w-5xl mx-auto pt-[80px] pb-[60px] px-5 md:pt-[132px] md:pb-[30px] md:px-8 text-center flex flex-col items-center gap-8 relative'
     >
      
       <motion.div 
         className="flex flex-col items-center gap-8 w-full max-w-[500px]"
-       style={isDesktop ? { opacity: headerOpacity, y: headerTranslateY } : {}}
+       style={
+  isDesktop
+    ? { opacity: headerOpacity, y: headerTranslateY }
+    : { opacity: 1, y: 0 }
+}
+
       >
         <div className="text-black-2 grid gap-4 text-balance">
           <h1 className="text-[32px] md:text-[40px] lg:text-[48px]">Convert customers with an AI-powered CRM</h1>
@@ -77,7 +82,7 @@ useEffect(() => {
           
           <div className="h-[500px]"></div>
           <motion.div 
-            className="absolute top-[-10%] left-0 w-full border-[6px] border-black-2 rounded-xl overflow-hidden transform-3d transition-all duration-300"
+            className="absolute top-[-10%] left-0 w-full border-[6px] border-black-2 rounded-xl overflow-hidden transform-3d transition-all duration-300 bg-white-1"
             style={{
               y: imageTranslateY,
               rotateX: imageRotateX,
@@ -100,7 +105,7 @@ useEffect(() => {
           <img src='/Home/homeHero.png' alt="AI-powered CRM dashboard" />
         </div>
 
-        <motion.div  style={isDesktop ? { y: bottomTranslateY } : {}} className="flex flex-col gap-8">
+        <motion.div  style={isDesktop ? { y: bottomTranslateY } : {y:0}} className="flex flex-col gap-8">
           <h6 className="text-black-2 text-xl font-medium">
             Trusted by 1,000+ startups & enterprises
           </h6>
