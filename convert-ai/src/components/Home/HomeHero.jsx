@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Button from '../ui/Button'
 import assets from '../../assets/images/assets.js'
 import { motion, useScroll, useTransform } from "motion/react";
@@ -6,9 +6,9 @@ import HeroCarousel from './HeroCarousel';
 
 const HomeHero = () => {
   const { scrollY } = useScroll();
-  const targetRef = React.useRef(null);
+  const targetRef = useRef(null);
   
-  const containerRef = React.useRef(null);
+  const containerRef = useRef(null);
 
   const imageTranslateY = useTransform(
     scrollY,
