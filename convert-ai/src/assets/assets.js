@@ -1,4 +1,4 @@
-import logo from './images/logoMark.png';
+import logo from './images/logo.png';
 import homeHero from './images/homeHero.png';
 import heroLogo1 from './images/heroLogo1.svg';
 import heroLogo2 from './images/heroLogo2.svg';
