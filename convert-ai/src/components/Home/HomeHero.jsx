@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Button from '../ui/Button'
-import assets from '../../assets/images/assets'
+import assets from '../../assets/images/assets.js'
 import { motion, useScroll, useTransform } from "framer-motion";
 import HeroCarousel from './HeroCarousel';
 
