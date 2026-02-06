@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Button from '../ui/Button'
+import Button from '../common/Button'
 import { motion, useScroll, useTransform } from "motion/react";
 import HeroCarousel from './HeroCarousel';
 

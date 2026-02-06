@@ -4,7 +4,7 @@ import { motion ,useScroll, useMotionValueEvent} from "motion/react";
 import { IoChevronDownOutline,IoClipboardOutline } from "react-icons/io5";
 import { FaRegEdit } from "react-icons/fa";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
-import Button from '../components/ui/Button.jsx';
+import Button from '../components/common/Button';
 import { 
   HiOutlineHome, 
   HiOutlineSparkles, 

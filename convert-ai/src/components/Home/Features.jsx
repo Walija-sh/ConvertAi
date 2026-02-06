@@ -1,6 +1,6 @@
 import React from 'react'
-import HeaderPill from '../ui/HeaderPill'
-import Button from '../ui/Button';
+import HeaderPill from '../common/HeaderPill'
+import Button from '../common/Button';
 import FeatureCard from '../common/FeatureCard';
 
 const Features = () => {

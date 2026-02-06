@@ -1,5 +1,5 @@
 
-import HeaderPill from './../ui/HeaderPill';
+import HeaderPill from '../common/HeaderPill';
 import { GoPlusCircle } from "react-icons/go";
 import { FaRegEdit } from "react-icons/fa";
 import { HiOutlineChartPie, HiOutlineRocketLaunch } from "react-icons/hi2";

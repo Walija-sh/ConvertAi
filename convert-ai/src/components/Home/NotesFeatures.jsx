@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import HeaderPill from "../ui/HeaderPill";
+import HeaderPill from "../common/HeaderPill";
 import { motion } from "motion/react";
 import { TbCategory } from "react-icons/tb";
 import { BsFolder2 } from "react-icons/bs";
@@ -120,7 +120,7 @@ useEffect(() => {
       </div>
 
       {/* layout */}
-      <div className="max-w-[500px] lg:max-w-[960px] mx-auto grid gap-8 md:grid-cols-2">
+      <div className="max-w-[500px] lg:max-w-[960px] mx-auto grid gap-8 lg:grid-cols-2">
 
         {/* cards */}
         <div>
@@ -136,7 +136,7 @@ useEffect(() => {
 
         {/* image */}
         <div
-          className={`border border-gray-2/20 rounded-[16px] overflow-hidden aspect-[1.3] h-full ${current.bg}`}
+          className={`border border-gray-2/20 rounded-[16px] overflow-hidden aspect-[1.3] ${current.bg}`}
         >
           <motion.div
             key={current.image}

@@ -17,9 +17,8 @@ const Button = ({
   
   const variantStyles = {
     light: "border-gray-2/20 border text-black-2 bg-white",
-    primary: "border-primary border text-white bg-primary outline-1 outline-primary outline-offset-[1.5px]",
-    secondary: "border-black-2 border text-white bg-black-2 outline-1 outline-black-2 outline-offset-[1.5px]",
-    accent: "border-accent border text-white bg-accent outline-1 outline-accent outline-offset-[1.5px]",
+    primary: "border-white  border-[1.5px] text-white bg-primary outline-1 outline-primary ",
+    secondary: "border-white  border-[1.5px] text-white bg-black-2 outline-1 outline-black-2 ",
   };
   
  const OUTER_SHADOW = `
@@ -61,8 +60,8 @@ if (shadow && hasInset) {
       to={to}
        style={{ boxShadow: boxShadowValue }}
       className={`
-        px-5 py-1.5 text-center rounded-md text-[16px] lg:text-[18px] font-medium 
-        overflow-hidden transition-all duration-200
+        relative px-5 py-1.5 text-center rounded-md text-[16px] lg:text-[18px] font-medium 
+        overflow-hidden transition-all duration-200 relative 
         ${variantStyles[variant]}
         
         ${fullWidth ? 'w-full' : 'w-auto inline-block'}
@@ -72,7 +71,8 @@ if (shadow && hasInset) {
       onMouseLeave={() => setIsHovered(false)}
       {...props}
     >
-      <div className='overflow-hidden h-6 relative'>
+    
+      <div className='overflow-hidden h-6 relative z-20'>
         <motion.div
           className='flex flex-col'
           animate={{ y: isHovered ? translateValue : 0 }}

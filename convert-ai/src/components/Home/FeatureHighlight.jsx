@@ -73,7 +73,7 @@ const fadeUpVariant = {
   variants={containerVariant}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.3 }} // repeatable on scroll
+  viewport={{ once: true, amount: 0.3 }} 
   className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-6"
 >
   {features.map((feature, idx) => (
