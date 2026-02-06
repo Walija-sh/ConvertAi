@@ -35,7 +35,7 @@ const Navbar = () => {
 
   useMotionValueEvent(scrollY, "change", (current) => {
     const previous = scrollY.getPrevious() || 0;
-    if (current > previous && current > 80) {
+    if (current > previous && current > 180) {
       setHidden(true);
       // Close dropdown when scrolling
       setIsAllPagesOpen(false);

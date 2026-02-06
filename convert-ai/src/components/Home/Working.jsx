@@ -59,8 +59,8 @@ const Working = () => {
       </div>
 
       {/* cards container */}
-      <div className="pt-5 px-2 border-4 rounded-2xl border-gray-2/20 lg:pt-8 lg:px-8 grid gap-5">
-        <div className="grid grid-cols-2 lg:grid-cols-4">
+      <div className="pt-5 px-2 border-4 rounded-2xl border-gray-2/20 lg:pt-8 lg:px-8 grid gap-5 overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {cardsData.map((card, index) => (
             <WorkingCard
               key={index}

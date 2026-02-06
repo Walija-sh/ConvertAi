@@ -11,6 +11,9 @@ const FeatureCard = ({
   bgColor = 'bg-pastel-1' 
 }) => {
   const isImageOnRight = imageSide === 'right';
+  const isLargeScreen =
+  typeof window !== "undefined" ? window.innerWidth >= 1024 : false;
+
 
   const fadeUpVariant = {
   hidden: { opacity: 0, y: 50 },
@@ -22,7 +25,7 @@ const FeatureCard = ({
 };
 
 const imageVariant = (isImageOnRight) => {
-  // Check if small screen
+  
   const isSmallScreen = typeof window !== 'undefined' ? window.innerWidth < 1024 : true;
 
   const fromRight = isSmallScreen || isImageOnRight;
@@ -44,7 +47,7 @@ const imageVariant = (isImageOnRight) => {
   return (
     <div className="grid gap-[32px] lg:grid-cols-2 lg:gap-[40px] items-center">
       {/* Image container */}
-      <div className={`border-[1px] lg:order-${isImageOnRight ? '2' : '1'} border-gray-2/20 rounded-xl lg:rounded-[20px] overflow-hidden aspect-[1.3] ${bgColor} h-full`}>
+      <div className={`border-[1px] ${isImageOnRight ? 'lg:order-2' : 'lg:order-1'} border-gray-2/20 rounded-xl lg:rounded-[20px] overflow-hidden aspect-[1.3] ${bgColor} h-full`}>
         <motion.div
         
         className={`border-2 border-gray-2/20 rounded-xl aspect-[1.26] overflow-hidden mt-6 ml-6 lg:mt-10 ${isImageOnRight ? 'lg:ml-10 -mr-2' : 'lg:-ml-2 lg:mr-10 -mr-2'}`}
@@ -53,7 +56,7 @@ const imageVariant = (isImageOnRight) => {
     whileInView="visible"
     viewport={{ once: true, amount: 0.3 }}
         >
-          <img src={image} className='object-cover object-top-left' alt={title} />
+          <img src={image} className='object-cover object-top-left h-full w-[106%]' alt={title} />
         </motion.div>
       </div>
       
@@ -62,14 +65,14 @@ const imageVariant = (isImageOnRight) => {
         <div className="grid gap-4">
           <motion.h3 className='text-[22px] lg:text-[26px] xl:text-[30px] font-medium'
           variants={fadeUpVariant}
-    initial="hidden"
-    whileInView="visible"
+ initial={isLargeScreen ? "hidden" : false}
+  whileInView={isLargeScreen ? "visible" : false}
     viewport={{ once: true, amount: 0.3 }}
           >{title}</motion.h3>
           <motion.p className='text-[16px] lg:text-[17px] xl:text-[18px]'
           variants={fadeUpVariant}
-    initial="hidden"
-    whileInView="visible"
+  initial={isLargeScreen ? "hidden" : false}
+  whileInView={isLargeScreen ? "visible" : false}
     viewport={{ once: true, amount: 0.3 }}
           >{description}</motion.p>
         </div>
@@ -77,8 +80,8 @@ const imageVariant = (isImageOnRight) => {
           {features.map((feature, index) => (
             <motion.li key={index} className='flex items-center gap-4'
             variants={fadeUpVariant}
-    initial="hidden"
-    whileInView="visible"
+    initial={isLargeScreen ? "hidden" : false}
+  whileInView={isLargeScreen ? "visible" : false}
     viewport={{ once: true, amount: 0.3 }}>
               <span className='flex items-center justify-center rounded-full text-primary bg-primary-hover border-[1px] border-white-2 w-fit'>
                 <GoChevronRight />
