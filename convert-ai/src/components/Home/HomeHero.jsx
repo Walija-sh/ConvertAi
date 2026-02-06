@@ -80,9 +80,9 @@ useEffect(() => {
       >
         <div className="hidden lg:block relative perspective-[1000px] ">
           
-          <div className="h-[500px]"></div>
+          <div className="h-[450px]"></div>
           <motion.div 
-            className="absolute top-[-10%] left-0 w-full border-[6px] border-black-2 rounded-xl overflow-hidden transform-3d transition-all duration-300 bg-white-1"
+            className="absolute top-[-22%] left-0 w-full border-[6px] border-black-2 rounded-xl overflow-hidden transform-3d transition-all duration-300 bg-white-1"
             style={{
               y: imageTranslateY,
               rotateX: imageRotateX,
