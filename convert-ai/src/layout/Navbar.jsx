@@ -24,6 +24,7 @@ import {
 import { BsChatDots } from "react-icons/bs";
 
 const Navbar = () => {
+    const navRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [isAllPagesOpen, setIsAllPagesOpen] = useState(false);
@@ -33,16 +34,23 @@ const Navbar = () => {
   const dropdownRef = useRef(null);
   const triggerRef = useRef(null);
 
-  useMotionValueEvent(scrollY, "change", (current) => {
-    const previous = scrollY.getPrevious() || 0;
-    if (current > previous && current > 180) {
-      setHidden(true);
-      // Close dropdown when scrolling
-      setIsAllPagesOpen(false);
-    } else {
-      setHidden(false);
-    }
-  });
+
+useMotionValueEvent(scrollY, "change", (current) => {
+  const previous = scrollY.getPrevious() || 0;
+
+  // Ignore scroll while mobile menu or dropdown is open
+  if (isOpen || isAllPagesOpen) return;
+
+  // Hide navbar when scrolling down
+  if (current > previous && current > 180) {
+    setHidden(true);
+  } else {
+    setHidden(false);
+  }
+});
+
+
+
 
   // Handle mouse enter/leave for dropdown
   const handleMouseEnter = () => {
@@ -103,16 +111,19 @@ const Navbar = () => {
   ];
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-    
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [isOpen]); 
+  if (isOpen) {
+    document.body.style.overflow = 'hidden';
+    document.body.style.paddingRight = '0px'; // Prevent layout shift
+  } else {
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+  }
+  
+  return () => {
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+  };
+}, [isOpen]);
   
   useEffect(() => {
     const handleResize = () => {
@@ -165,11 +176,13 @@ const Navbar = () => {
   };
 
   return (
+    <nav ref={navRef} className="relative">
+
     <motion.div   
       variants={navVariants}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.35, ease: "easeOut" }}
-      className="bg-white-1 lg:border-b lg:border-b-black-2/20 sticky top-0 z-50"
+      className="bg-white-1 lg:border-b lg:border-b-black-2/20 fixed w-full top-0 z-150"
     >
       <div className="grid border-b border-black-1 max-w-7xl mx-auto lg:border-0 lg:px-7.5 lg:py-3 lg:flex lg:items-center lg:justify-between">
         <div className="flex items-center justify-between px-5 py-4 lg:p-0">
@@ -276,6 +289,7 @@ const Navbar = () => {
         </div>
       </div>
     </motion.div>
+    </nav>
   )
 }
 
