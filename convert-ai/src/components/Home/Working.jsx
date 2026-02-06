@@ -48,7 +48,7 @@ const Working = () => {
     <section className="max-w-[500px] lg:max-w-[1064px] mx-auto py-[60px] px-[20px] grid gap-[60px] lg:gap-[80px] lg:py-[80px] lg:pt-0 lg:px-8 overflow-hidden">
       
       {/* header */}
-      <div className="flex flex-col items-center gap-8  mx-auto text-center ">
+      <div className="flex flex-col items-center gap-8 max-w-[720px]  mx-auto text-center ">
         <HeaderPill text="How it works" />
         <div className="grid gap-4 text-balance text-black-2">
           <h2 className="text-[28px] font-medium lg:text-[34px] xl:text-[36px]">
@@ -78,9 +78,9 @@ const Working = () => {
           <AnimatePresence mode="wait">
   <motion.div
     key={activeIndex}
-    initial={{ opacity:1,  y: 50 }}
-    animate={{  y: 0 }}
-    exit={{ opacity:0 }}
+     initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -50 }}
     transition={{ duration: 0.3, ease: "easeInOut" }}
     className="border-4 rounded-t-xl border-white-2 overflow-hidden"
   >
