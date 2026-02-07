@@ -92,3 +92,7 @@ body{
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+.cta-shadow{
+    box-shadow: rgba(0, 0, 0, 0.125) 0.180656px 0.180656px 1.27743px -0.833333px, rgba(0, 0, 0, 0.125) 0.68656px 0.68656px 4.85471px -1.66667px, rgba(0, 0, 0, 0.125) 3px 3px 21.2132px -2.5px;
+}

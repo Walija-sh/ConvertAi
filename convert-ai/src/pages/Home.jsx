@@ -11,6 +11,7 @@ import Integrations from '../components/Home/Integrations'
 import Testimonials from '../components/Home/Testimonials'
 import Tutorial from '../components/Home/Tutorial'
 import FAQs from '../components/common/FAQs'
+import Cta from '../components/Home/Cta'
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
       <Testimonials/>
       <Tutorial/>
       <FAQs/>
+      <Cta/>
     </div>
   )
 }

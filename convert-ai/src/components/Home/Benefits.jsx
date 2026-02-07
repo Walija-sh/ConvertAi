@@ -3,7 +3,7 @@ import Button from '../common/Button'
 
 const Benefits = () => {
   return (
-    <section className='py-8 px-4'>
+    <section className='py-8 px-4 lg:py-12 lg:px-8 xl:px-10'>
         <div className="max-w-[1064px] mx-auto">
             <div className="rounded-[20px] bg-primary text-white-1 text-center py-[60px] px-8  lg:py-[100px] lg:px-[60px] relative overflow-hidden">
                <div className='absolute inset-[20px] bg-linear-to-b from-primary to-primary-grad rounded-[20px] z-1'></div>
