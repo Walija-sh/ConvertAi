@@ -12,6 +12,7 @@
     --color-gray-1:#666666;
     --color-gray-2:#b8b8b8;
     --color-gray-3:#aaaaaa;
+    --color-gray-4:#e6e6e6;
     --color-white-1:#FDFDFC;
     --color-white-2:#Ffecd3;
     --color-white-2:#Ffd6a5;
@@ -19,6 +20,7 @@
     --color-pastel-1:#e6e6fa;
     --color-pastel-2:#e0e7ff;
     --color-pastel-3:#fff7ec;
+    --color-pastel-4:#fae8ff;
 
 
 }
@@ -81,4 +83,11 @@ body{
 }
 
 
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
