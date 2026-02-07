@@ -7,6 +7,7 @@ import NotesFeatures from '../components/Home/NotesFeatures'
 import FeatureHighlight from '../components/Home/FeatureHighlight'
 import { Link } from 'react-router-dom'
 import Benefits from '../components/Home/Benefits'
+import Integrations from '../components/Home/Integrations'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <NotesFeatures/>
       <FeatureHighlight/>
       <Benefits/>
+      <Integrations/>
     </div>
   )
 }

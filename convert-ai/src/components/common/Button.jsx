@@ -17,8 +17,8 @@ const Button = ({
   
   const variantStyles = {
     light: "border-gray-2/20 border text-black-2 bg-white",
-    primary: "border-white  border-[1.5px] text-white bg-primary outline-1 outline-primary ",
-    secondary: "border-white  border-[1.5px] text-white bg-black-2 outline-1 outline-black-2 ",
+    primary: "border-white-2  border-[1.5px] text-white bg-primary outline-1 outline-primary ",
+    secondary: "border-white-1  border-[1.5px] text-white bg-black-2 outline-1 outline-black-2 ",
   };
   
  const OUTER_SHADOW = `
