@@ -9,6 +9,8 @@ import { Link } from 'react-router-dom'
 import Benefits from '../components/Home/Benefits'
 import Integrations from '../components/Home/Integrations'
 import Testimonials from '../components/Home/Testimonials'
+import Tutorial from '../components/Home/Tutorial'
+import FAQs from '../components/common/FAQs'
 
 const Home = () => {
   return (
@@ -22,6 +24,8 @@ const Home = () => {
       <Benefits/>
       <Integrations/>
       <Testimonials/>
+      <Tutorial/>
+      <FAQs/>
     </div>
   )
 }
