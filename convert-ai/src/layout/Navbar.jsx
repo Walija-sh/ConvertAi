@@ -186,7 +186,7 @@ useMotionValueEvent(scrollY, "change", (current) => {
     >
       <div className="grid border-b border-black-1 max-w-7xl mx-auto lg:border-0 lg:px-7.5 lg:py-3 lg:flex lg:items-center lg:justify-between">
         <div className="flex items-center justify-between px-5 py-4 lg:p-0">
-          <Link to='/' className="flex items-center gap-1">
+          <Link to='/' className="flex items-center gap-1 focus:outline-none">
             <img src='/logo.png' alt="" className='max-w-8' />
             <p className='text-black text-xl font-medium'>Convert</p>
           </Link>

@@ -1,21 +1,21 @@
 import React from 'react'
 import FeatureSection from '../common/FeatureSection'
 
-const Features = () => {
+const AiAutomate = () => {
 
-const homepageCardsData = [
+const featuresPageCardsData = [
   {
     id: 1,
     title: "Automate lead capture and segmentation",
-    description: "Automatically capture leads from various channels like your website, social media, emails, and more into a single dashboard. Integrate with external tools and platforms to streamline data collection.",
+    description: "Automatically capture leads from various channels into a single dashboard. Integrate with external tools and platforms to streamline data collection.",
     features: [
       "Automatically capture leads from social channels",
       "Utilize smart segmentation to categorize leads",
       "Integrate with external tools and platforms"
     ],
-    image: "/Home/WorkingAutomate.png",
+    image: "/automate.png",
     imageSide: "right",
-    bgColor: "bg-pastel-1"
+    bgColor: "bg-pastel-3"
   },
   {
     id: 2,
@@ -26,9 +26,9 @@ const homepageCardsData = [
       "Leverage AI-driven insights to dynamically adjust nurturing",
       "Maximize engagement and response rates"
     ],
-    image: "/Home/WorkingAdjust.png",
+    image: "/adjust.png",
     imageSide: "left",
-    bgColor: "bg-pastel-2"
+    bgColor: "bg-pastel-3"
   },
   {
     id: 3,
@@ -39,28 +39,22 @@ const homepageCardsData = [
       "Analyze conversion data to identify successful tactics",
       "Optimize your sales process for better results"
     ],
-    image: "/Home/optimize.png",
+    image: "/optimize.png",
     imageSide: "right",
     bgColor: "bg-pastel-3"
   }
 ]
 
   return (
-    <FeatureSection
+<FeatureSection
   header={{
-    pill: "Features",
-    title: <> <span className="text-primary">Save 7+ hours/week</span> with Convert CRM </>,
+    pill: "AI Automation",
+    title: "Get more done with an AI assistant",
     subtitle: "Save countless hours on manual data entry and aggregates all the data you need to focus on closing deals easily"
   }}
-  cards={homepageCardsData}
-  cta={{
-    text: "See all features",
-    to: "/features",
-    variant: "secondary",
-    shadow: true
-  }}
+  cards={featuresPageCardsData}
 />
   )
 }
 
-export default Features
+export default AiAutomate

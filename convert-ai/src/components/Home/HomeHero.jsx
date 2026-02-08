@@ -54,7 +54,7 @@ useEffect(() => {
   return (
     <section 
       ref={containerRef}
-      className='max-w-5xl mx-auto pt-[80px] pb-[60px] px-5 md:pt-[132px] md:pb-[30px] md:px-8 text-center flex flex-col items-center gap-8 relative mt-[60px]'
+      className='max-w-5xl mx-auto pt-[80px] pb-[60px] px-5 md:pt-[132px] md:pb-[30px] md:px-8 text-center flex flex-col items-center gap-8 relative '
     >
      
       <motion.div 

@@ -7,7 +7,7 @@ const AccordionItem = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-[1px] border-gray-2/20 rounded-[12px] bg-pastel-3 py-5 px-6   text-black-2 grid">
+    <div className="border-[1px] border-gray-2/20 rounded-[12px] bg-linear-to-b from-pastel-3/30 to-pastel-3/80 py-5 px-6   text-black-2 grid">
       {/* Question Header */}
       <div
         className="flex gap-6 items-center justify-between cursor-pointer"
