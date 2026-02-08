@@ -11,8 +11,10 @@ import Tutorial from '../components/Home/Tutorial'
 import FAQs from '../components/common/FAQs'
 import Cta from '../components/common/Cta'
 import HomeFeatures from '../components/Home/HomeFeatures'
+import useDocumentTitle from '../components/common/useDocumentTitle'
 
 const Home = () => {
+  useDocumentTitle('Convert: AI-Powered CRM for Smarter Business Growth')
   return (
     <div className=''>
       <HomeHero/>

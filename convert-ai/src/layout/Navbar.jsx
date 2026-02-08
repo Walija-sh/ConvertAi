@@ -97,7 +97,7 @@ useMotionValueEvent(scrollY, "change", (current) => {
     { label: "Pricing", icon: HiOutlineCurrencyDollar, route: "/pricing" },
     { label: "Integrations", icon: HiOutlineLink, route: "/integrations" },
     { label: "Contact", icon: HiOutlinePhone, route: "/contact" },
-    { label: "Testimonials", icon: BsChatDots, route: "/wall-of-love" },
+    { label: "Testimonials", icon: BsChatDots, route: "/testimonials" },
     { label: "About us", icon: HiOutlineUsers, route: "/about" },
     { label: "FAQ", icon: HiOutlineQuestionMarkCircle, route: "/faq" },
     { label: "Blogs", icon: FaRegEdit, route: "/blog" },

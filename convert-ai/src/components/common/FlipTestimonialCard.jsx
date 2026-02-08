@@ -58,7 +58,7 @@ const FlipTestimonialCard = ({
               </div>
 
               <h6 className="text-xl font-medium">{name}</h6>
-              <p className="text-[14px] lg:text-[15px]">{role}</p>
+              <p className="text-[14px] lg:text-[15px] xl:text-[16px]">{role}</p>
             </div>
           </div>
         </div>

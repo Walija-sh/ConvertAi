@@ -27,7 +27,7 @@ const footerLinks = [
       { title: 'About', path: '/about' },
       { title: 'Careers', path: '/careers' },
       { title: 'Contact', path: '/contact' },
-      { title: 'Wall of Love', path: '/wall-of-love' },
+      { title: 'Wall of Love', path: '/testimonials' },
     ],
   },
   {

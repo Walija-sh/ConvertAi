@@ -17,7 +17,8 @@ const packagesData = [
     buttonText: "Subscribe",
     buttonVariant: "secondary",
     bgGradient: "bg-linear-180 from-pastel-1 to-pastel-1/40",
-    borderColor: ""
+    borderColor: "",
+    pricePeriod:'/month'
   },
   {
     id: 2,
@@ -34,7 +35,8 @@ const packagesData = [
     buttonText: "Start a 7-day free trial",
     buttonVariant: "primary",
     bgGradient: "bg-linear-180 from-white-3 to-white-3/40",
-    borderColor: "border-[1px] border-primary"
+    borderColor: "border-[1px] border-primary",
+    pricePeriod:'per user/month'
   },
   {
     id: 3,
@@ -52,7 +54,8 @@ const packagesData = [
     buttonText: "Start a 14-day free trial",
     buttonVariant: "secondary",
     bgGradient: "bg-linear-180 from-pastel-4 to-pastel-4/40",
-    borderColor: ""
+    borderColor: "",
+    pricePeriod:'per user/month'
   }
 ];
 
@@ -96,7 +99,7 @@ const Packages = () => {
     key={pkg.id} 
     {...pkg} 
     price={priceMap[activeTab][idx]} 
-    pricePeriod={activeTab === "monthly" ? "per user/month" : "per user/year"} 
+    
   />
 ))}
 

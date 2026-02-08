@@ -28,7 +28,7 @@ const Benefits = ({
               text={buttonText}
               variant="secondary"
               shadow={true}
-              className="w-fit mx-auto px-8"
+              className="w-fit mx-auto px-8 py-1.5"
             />
           </div>
         </div>

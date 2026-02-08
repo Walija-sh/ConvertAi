@@ -31,7 +31,7 @@ const App = () => {
         {/* Secondary Pages */}
         <Route path="changelog" element={<ChangeLog />} />
         <Route path="integrations" element={<Integrations />} />
-        <Route path="wall-of-love" element={<WallsOfLove />} />
+        <Route path="testimonials" element={<WallsOfLove />} />
         <Route path="careers" element={<Careers />} />
         <Route path="faq" element={<Faq />} />
 

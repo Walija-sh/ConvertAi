@@ -13,7 +13,7 @@ const { scrollYProgress } = useScroll({
 });
 
 
-const scale = useTransform(scrollYProgress, [0, 1], [1, 3]);
+const scale = useTransform(scrollYProgress, [0, 1], [1, 10]);
 
 const fadeUp = {
   hidden: {
@@ -24,7 +24,7 @@ const fadeUp = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.3,
       ease: "easeOut"
     }
   }
