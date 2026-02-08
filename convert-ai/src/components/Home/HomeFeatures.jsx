@@ -1,7 +1,7 @@
 import React from 'react'
 import FeatureSection from '../common/FeatureSection'
 
-const Features = () => {
+const HomeFeatures = () => {
 
 const homepageCardsData = [
   {
@@ -63,4 +63,4 @@ const homepageCardsData = [
   )
 }
 
-export default Features
+export default HomeFeatures
