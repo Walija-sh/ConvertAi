@@ -39,6 +39,7 @@ const App = () => {
         <Route path="terms-of-service" element={<TermsOfService />} />
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="cookie-policy" element={<CookiePolicy />} />
+        <Route path="*" element={<div>Page not found</div>} />
       </Route>
     </Routes>
   );

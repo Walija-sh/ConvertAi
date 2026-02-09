@@ -113,7 +113,7 @@ useMotionValueEvent(scrollY, "change", (current) => {
   useEffect(() => {
   if (isOpen) {
     document.body.style.overflow = 'hidden';
-    document.body.style.paddingRight = '0px'; // Prevent layout shift
+    document.body.style.paddingRight = '0px';
   } else {
     document.body.style.overflow = '';
     document.body.style.paddingRight = '';
@@ -229,8 +229,8 @@ useMotionValueEvent(scrollY, "change", (current) => {
             </Link>
           </div>
           <div className="flex flex-col gap-2.5 ">
-            <Button text='Log in' fullWidth={true} to='#' />
-            <Button text='Sign up' variant='primary' fullWidth={true} to='#'/>
+            <Button text='Log in' fullWidth={true} to='/' />
+            <Button text='Sign up' variant='primary' fullWidth={true} to='/'/>
           </div>
         </motion.div>
         
@@ -283,8 +283,8 @@ useMotionValueEvent(scrollY, "change", (current) => {
           </div>
           
           <div className="flex flex-row gap-2.5">
-            <Button text='Log in' to='#' />
-            <Button text='Sign up' variant='primary' to='#' />
+            <Button text='Log in' to='/' />
+            <Button text='Sign up' variant='primary' to='/' />
           </div>
         </div>
       </div>
