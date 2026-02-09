@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import HeaderPill from '../common/HeaderPill'
 import Button from '../common/Button'
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import Packages from './Packages';
 
 const PricingHero = () => {
@@ -12,8 +12,13 @@ const { scrollYProgress } = useScroll({
   offset: ["start 0%", "center center"] 
 });
 
+const rawScale = useTransform(scrollYProgress, [0, 1], [1, 10]);
 
-const scale = useTransform(scrollYProgress, [0, 1], [1, 10]);
+const scale = useSpring(rawScale, {
+  stiffness: 80,   
+  damping: 20,     
+  mass: 0.6
+});
 
 const fadeUp = {
   hidden: {

@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import HeaderPill from '../common/HeaderPill'
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import ContactForm from './ContactForm';
 
 const ContactSection = () => {
@@ -12,7 +12,13 @@ const { scrollYProgress } = useScroll({
 });
 
 
-const scale = useTransform(scrollYProgress, [0, 1], [1, 10]);
+const rawScale = useTransform(scrollYProgress, [0, 1], [1, 10]);
+
+const scale = useSpring(rawScale, {
+  stiffness: 80,   
+  damping: 20,     
+  mass: 0.6
+});
 
 const fadeUp = {
   hidden: {
@@ -26,7 +32,7 @@ const fadeUp = {
       duration: 0.3,
       ease: "easeOut"
     }
-  }
+  },
 };
 
 
