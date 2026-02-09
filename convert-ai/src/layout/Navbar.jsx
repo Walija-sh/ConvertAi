@@ -274,7 +274,7 @@ useMotionValueEvent(scrollY, "change", (current) => {
                     onClick={() => setIsAllPagesOpen(false)}
                     className="flex items-center gap-3 group/link px-3 rounded-[99px] py-1.5 transition-all duration-300 ease-in hover:bg-primary-hover"
                   >
-                    <item.icon className="text-primary text-xl shrink-0" />
+                    <item.icon className="text-primary text-[18px] shrink-0" />
                     <span className="font-medium text-lg">{item.label}</span>
                   </Link>
                 ))}

@@ -10,6 +10,7 @@ const Button = ({
   className = "",
   shadow = false,
   fullWidth = false,
+  as = "link",
   ...props 
 }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -54,10 +55,12 @@ if (shadow && hasInset) {
   
   const textHeight = getTextHeight(); 
   const translateValue = isHovered ? -textHeight : 0; 
+  const Component = as === "a" ? "a" : Link;
 
   return (
-    <Link 
-      to={to}
+    <Component 
+        to={as === "a" ? undefined : to}
+      href={as === "a" ? to : undefined}
        style={{ boxShadow: boxShadowValue }}
       className={`
         relative px-5 py-1.5 text-center rounded-md text-[16px] lg:text-[18px] font-medium 
@@ -86,7 +89,7 @@ if (shadow && hasInset) {
           </span>
         </motion.div>
       </div>
-    </Link>
+    </Component>
   );
 };
 

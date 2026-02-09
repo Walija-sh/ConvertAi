@@ -1,13 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Button from '../common/Button'
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import HeroCarousel from './HeroCarousel';
 
 const HomeHero = () => {
   const { scrollY } = useScroll();
   const targetRef = useRef(null);
-  
-  const containerRef = useRef(null);
+  const circleRef = useRef(null);
 
   const imageTranslateY = useTransform(
     scrollY,
@@ -51,14 +50,30 @@ useEffect(() => {
   return () => window.removeEventListener("resize", check);
 }, []);
 
+// circle anim
+const { scrollYProgress: circleProgress } = useScroll({
+  target: circleRef,
+  offset: ["start 0%", "center center"]
+});
+const rawScale = useTransform(circleProgress, [0, 1], [1, 10]);
+
+const scale = useSpring(rawScale, {
+  stiffness: 80,
+  damping: 20,
+  mass: 0.6
+});
+
+
   return (
     <section 
-      ref={containerRef}
-      className='max-w-5xl mx-auto pt-[80px] pb-[60px] px-5 md:pt-[132px] md:pb-[30px] md:px-8 text-center flex flex-col items-center gap-8 relative '
+      ref={circleRef}
+      className='max-w-5xl mx-auto pt-[80px] pb-[60px] px-5 md:pt-[132px] md:pb-[30px] md:px-8 text-center flex flex-col items-center gap-8 relative overflow-hidden'
     >
-     
+     <motion.div 
+             style={{scale}}
+             className="absolute hidden lg:block aspect-square rounded-full w-[800px] bg-radial from-pastel-3/20  to-pastel-3/60 top-7 left-[50%]  translate-x-[-50%] z-1"></motion.div>
       <motion.div 
-        className="flex flex-col items-center gap-8 w-full max-w-[500px]"
+        className="flex flex-col items-center gap-8 w-full max-w-[500px] relative z-10"
        style={
   isDesktop
     ? { opacity: headerOpacity, y: headerTranslateY }
@@ -67,8 +82,8 @@ useEffect(() => {
 
       >
         <div className="text-black-2 grid gap-4 text-balance">
-          <h1 className="text-[32px] md:text-[40px] lg:text-[48px]">Convert customers with an AI-powered CRM</h1>
-          <p className='text-[18px] md:text-[19px] lg:text-[20px]'>Streamline your sales process with AI-powered insights and close 50% more deals at faster speed.</p>
+          <h1 className="text-[32px] lg:text-[40px] xl:text-[48px] capitalize">Convert customers with an AI-powered CRM</h1>
+          <p className='text-[18px] lg:text-[19px] xl:text-[20px]'>Streamline your sales process with AI-powered insights and close 50% more deals at faster speed.</p>
         </div>
         <Button text='Get started' variant='primary' to='/' shadow={true} className='px-10 py-2'/>
       </motion.div>

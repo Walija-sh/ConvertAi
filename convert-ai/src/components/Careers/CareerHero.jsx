@@ -1,16 +1,18 @@
 import React, { useRef } from 'react'
 import HeaderPill from '../common/HeaderPill'
-import Button from '../common/Button'
-import FeatureHeroShowcase from './FeatureHeroShowcase'
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
+import CareerHeroContent from './CareerHeroContent';
+import Button from '../common/Button';
 
-const FeatureHero = () => {
+
+const CareerHero = () => {
       const SectRef = useRef(null);
 
 const { scrollYProgress } = useScroll({
   target: SectRef,
   offset: ["start 0%", "center center"] 
 });
+
 
 const rawScale = useTransform(scrollYProgress, [0, 1], [1, 10]);
 
@@ -47,37 +49,39 @@ const fadeUp = {
   initial="hidden"
   whileInView="show"
   viewport={{ once: true, margin: "-80px" }}
-    ref={SectRef} className=' mx-auto py-[60px]  px-5 lg:py-[80px] lg:px-8 xl:pt-[100px] text-center flex flex-col items-center gap-12 relative overflow-hidden '>
+    ref={SectRef} className=' mx-auto py-[60px]  px-5 lg:py-[80px] xl:px-8 xl:pt-[100px]  flex flex-col items-center gap-12 relative overflow-hidden '>
        <motion.div 
         style={{scale}}
-        className="absolute hidden lg:block aspect-square rounded-full w-[800px] bg-radial from-pastel-1/20 to-pastel-1/60 top-7 left-[50%]  translate-x-[-50%] z-1"></motion.div>
+        className="absolute hidden lg:block aspect-square rounded-full w-[800px] bg-radial from-pastel-3/20  to-pastel-3/60 top-7 left-[50%]  translate-x-[-50%] z-1"></motion.div>
 {/* header */}
 <div
-className="grid gap-10 max-w-[600px] mx-auto place-content-center relative z-10">
+className="grid gap-10 max-w-[600px] mx-auto place-content-center relative z-10 text-center">
   <div className="flex flex-col items-center gap-8 ">
     <motion.div variants={fadeUp} className='mx-auto' >
 
-    <HeaderPill text="Features" />
+    <HeaderPill text="Careers" />
     </motion.div>
 
  <div className="text-black-2 grid gap-4 text-balance">
-          <motion.h1 variants={fadeUp} className="text-[32px] lg:text-[40px] xl:text-[48px]">Powerful features inside one simple CMR software</motion.h1>
-          <motion.p variants={fadeUp}  className='text-[18px] lg:text-[19px] xl:text-[20px]'>Streamline your sales process with AI-powered insights and close 50% more deals at faster speed.</motion.p>
+          <motion.h1 variants={fadeUp} className="text-[32px] lg:text-[40px] xl:text-[48px]">Convert is growing.
+Grow with us.</motion.h1>
+          <motion.p variants={fadeUp}  className='text-[18px] lg:text-[19px] xl:text-[20px]'>Join us as we take on the CRM industry head on.</motion.p>
         </div>
   </div>
   <motion.div variants={fadeUp} className='mx-auto' >
 
 
-  <Button text='Get started' to='/' variant='primary' shadow={true} className='py-1.5 px-8 w-fit mx-auto'/>
+  <Button as='a' text='See open positions' to='#openpositions' variant='primary' shadow={true} className='py-1.5 px-8 w-fit mx-auto'/>
   </motion.div>
 
 </div>
-<motion.div variants={fadeUp} className='mx-auto' >
+<motion.div variants={fadeUp} className='w-full relative z-10' >
+    {/* content */}
+    <CareerHeroContent/>
 
-<FeatureHeroShowcase/>
 </motion.div>
     </motion.section>
   )
 }
 
-export default FeatureHero
+export default CareerHero

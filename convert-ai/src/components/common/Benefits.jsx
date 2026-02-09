@@ -18,8 +18,8 @@ const Benefits = ({
 
           {/* Content */}
           <div className="relative z-50 grid gap-[40px]">
-            <div className="grid gap-5 max-w-[720px] mx-auto text-balance">
-              <h2 className="text-[32px] md:text-[40px] xl:text-[48px]">{title}</h2>
+            <div className="grid gap-5 max-w-[720px] mx-auto ">
+              <h2 className="text-[32px] md:text-[40px] xl:text-[48px] text-balance">{title}</h2>
               <p className="text-[16px] lg:text-[17px] xl:text-[18px] font-medium">{description}</p>
             </div>
 

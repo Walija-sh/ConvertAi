@@ -59,8 +59,8 @@ const fadeUp = {
     </motion.div>
 
  <div className="text-black-2 grid gap-4 text-balance">
-          <motion.h1 variants={fadeUp} className="text-[32px] md:text-[40px] lg:text-[48px]">We are passionate about helping startups grow</motion.h1>
-          <motion.p variants={fadeUp}  className='text-[18px] md:text-[19px] lg:text-[20px]'>We are a small team of dedicated individuals passionate about helping companies grow sustainably with the best tools.</motion.p>
+          <motion.h1 variants={fadeUp} className="text-[32px] lg:text-[40px] xl:text-[48px]">We are passionate about helping startups grow</motion.h1>
+          <motion.p variants={fadeUp}  className='text-[18px] lg:text-[19px] xl:text-[20px]'>We are a small team of dedicated individuals passionate about helping companies grow sustainably with the best tools.</motion.p>
         </div>
   </div>
 

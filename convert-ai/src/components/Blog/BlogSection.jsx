@@ -87,8 +87,8 @@ const scale = useSpring(rawScale, {
   <div className="flex flex-col items-center gap-8 max-w-[600px] mx-auto relative z-10 text-center">
     <HeaderPill text="Blogs & Essays" />
  <div className="text-black-2 grid gap-4 text-balance">
-          <h1 className="text-[32px] md:text-[40px] lg:text-[48px]">Learn how to convert more users into customers</h1>
-          <p  className='text-[18px] md:text-[19px] lg:text-[20px]'>A collection of top notch blog posts to help you convert. </p>
+          <h1 className="text-[32px] lg:text-[40px] xl:text-[48px]">Learn how to convert more users into customers</h1>
+          <p  className='text-[18px] lg:text-[19px] xl:text-[20px]'>A collection of top notch blog posts to help you convert. </p>
         </div>
   </div>
 
