@@ -125,3 +125,24 @@ rgba(255, 85, 0, 0.25) 3px 3px 21.2132px -2.5px
 .position-shadow{
     box-shadow: rgba(0, 0, 0, 0.17) 0.301094px 0.301094px 1.44776px -1.16667px, rgba(0, 0, 0, 0.15) 1.14427px 1.14427px 5.50201px -2.33333px, rgba(0, 0, 0, 0.08) 5px 5px 24.0416px -3.5px;
 }
+
+.feature-integ-shadow{
+    box-shadow: rgba(0, 0, 0, 0.18) 0.301094px 0.301094px 2.12905px -1.25px, rgba(0, 0, 0, 0.16) 1.14427px 1.14427px 8.09119px -2.5px, rgba(0, 0, 0, 0.063) 5px 5px 35.3553px -3.75px;
+}
+.feature-integ-shadow:hover{
+    box-shadow:
+  0.301094px 0.301094px 2.12905px -1px rgba(255, 79, 0, 0.145),
+  1.14427px 1.14427px 8.09119px -2px rgba(255, 79, 0, 0.137),
+  5px 5px 35.3553px -3px rgba(255, 79, 0, 0.1);
+
+}
+
+.crm-integ-shadow{
+    box-shadow: rgba(0, 0, 0, 0.18) 0.301094px 0.301094px 2.12905px -1.25px, rgba(0, 0, 0, 0.16) 1.14427px 1.14427px 8.09119px -2.5px, rgba(0, 0, 0, 0.063) 5px 5px 35.3553px -3.75px;
+}
+.crm-integ-shadow:hover{
+    box-shadow:
+  0.301094px 0.301094px 2.12905px -1px rgba(0, 0, 0, 0.145),
+  1.14427px 1.14427px 8.09119px -2px rgba(0, 0, 0, 0.137),
+  5px 5px 35.3553px -3px rgba(0, 0, 0, 0.1);
+}

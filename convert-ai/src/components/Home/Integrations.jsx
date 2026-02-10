@@ -1,30 +1,30 @@
 import React from 'react'
 import HeaderPill from '../common/HeaderPill'
 import Button from '../common/Button'
-import VerticalIconCarousel from "./VerticalIconCarousel";
+import VerticalIconCarousel from "../common/VerticalIconCarousel";
 
 const col1 = [
-  "/Home/car1Icon1.svg",
-  "/Home/car1Icon2.svg",
-  "/Home/car1Icon3.svg",
+  "/intercom.svg",
+  "/zendesk.svg",
+  "/trello.svg",
 ];
 
 const col2 = [
-  "/Home/car2Icon1.svg",
-  "/Home/car2Icon2.svg",
-  "/Home/car2Icon3.svg",
+  "/linear.svg",
+  "/slack.svg",
+  "/linkedin.svg",
 ];
 
 const col3 = [
-  "/Home/car3Icon1.svg",
-  "/Home/car3Icon2.svg",
-  "/Home/car3Icon3.svg",
+  "/retool.svg",
+  "/peopleai.svg",
+  "/make.svg",
 ];
 
 const col4 = [
-  "/Home/car4Icon1.svg",
-  "/Home/car4Icon2.png",
-  "/Home/car4Icon3.svg",
+  "/mapbox.svg",
+  "/pabbly.png",
+  "/zapier.svg",
 ];
 
 

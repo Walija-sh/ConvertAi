@@ -3,6 +3,7 @@ import HeaderPill from '../common/HeaderPill'
 import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import BlogCard from './BlogCard';
 
+
 const blogData = [
   {
     title: "CRM strategies for retaining customers",

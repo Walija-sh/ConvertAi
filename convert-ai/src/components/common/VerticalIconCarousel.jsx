@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
 
-const VerticalIconCarousel = ({ icons = [], direction = "up", speed = 7 }) => {
-  const loopIcons = [...icons, ...icons];
+const VerticalIconCarousel = ({ icons = [], direction = "up", speed = 7,h='320px' }) => {
+  const loopIcons = [...icons, ...icons,...icons];
   const isUp = direction === "up";
 
   return (
-    <div className="overflow-hidden h-[320px] flex flex-col items-center ">
+    <div className="overflow-hidden flex flex-col items-center " style={{height:h?h:'320px'}}>
       <motion.div
         initial={{ y: isUp ? 0 : "-50%" }}   
         animate={{ y: isUp ? "-50%" : 0 }}   
