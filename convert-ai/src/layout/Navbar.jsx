@@ -30,7 +30,6 @@ const Navbar = () => {
   const [isAllPagesOpen, setIsAllPagesOpen] = useState(false);
   const { scrollY } = useScroll();
   
-  // Create refs for the dropdown and trigger
   const dropdownRef = useRef(null);
   const triggerRef = useRef(null);
 

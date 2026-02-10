@@ -79,7 +79,7 @@ if (shadow && hasInset) {
         <motion.div
           className='flex flex-col'
           animate={{ y: isHovered ? translateValue : 0 }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
+          transition={{ duration: 0.2, ease: "easeInOut" }}
         >
           <span className='h-6 flex items-center justify-center'>
             {text}
