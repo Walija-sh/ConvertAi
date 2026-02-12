@@ -1,6 +1,6 @@
 
 import { HiOutlineStar } from "react-icons/hi2";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useSpring, useTransform } from "motion/react";
 import { useRef } from "react";
 
 
@@ -9,10 +9,16 @@ const FeaturedTestimonial = () => {
 
 const { scrollYProgress } = useScroll({
   target: SectRef,
-  offset: ["start 80%", "center center"] 
+  offset: ["start 80%", "center start"] 
 });
 
-const scale = useTransform(scrollYProgress, [0, 1], [1, 2]);
+const rawScale = useTransform(scrollYProgress, [0, 1], [1, 10]);
+
+const scale = useSpring(rawScale, {
+  stiffness: 80,   
+  damping: 20,     
+  mass: 0.6
+});
 
 
   return (
