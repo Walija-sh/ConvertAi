@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import MainLayout from "./layout/MainLayout";
 
 import Home from "./pages/Home";
@@ -16,12 +16,15 @@ import CookiePolicy from "./pages/CookiePolicy";
 import Faq from "./pages/Faq";
 import ChangeLog from "./pages/ChangeLog.jsx";
 import ScrollToTop from "./components/common/ScrollToTop.jsx";
+import { AnimatePresence } from "motion/react";
 
 const App = () => {
+  const location=useLocation()
   return (
     <>
     <ScrollToTop />
-    <Routes>
+    <AnimatePresence mode="wait" >
+    <Routes location={location} key={location.pathname}>
       <Route path="/" element={<MainLayout />}>
         {/* Core Pages */}
         <Route index element={<Home />} />
@@ -45,6 +48,8 @@ const App = () => {
         <Route path="*" element={<div>Page not found</div>} />
       </Route>
     </Routes>
+
+    </AnimatePresence>
     </>
   );
 };
