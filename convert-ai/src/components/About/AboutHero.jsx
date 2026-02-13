@@ -50,7 +50,7 @@ const fadeUp = {
     ref={SectRef} className=' mx-auto py-[60px]  px-5 lg:py-[80px] lg:px-8 xl:pt-[100px]  flex flex-col items-center gap-12 relative overflow-hidden '>
        <motion.div 
         style={{scale}}
-        className="absolute hidden lg:block aspect-square rounded-full w-[800px] bg-radial from-pastel-3/20  to-pastel-3/60 top-7 left-[50%]  translate-x-[-50%] z-1"></motion.div>
+        className="absolute hidden lg:block aspect-square rounded-full w-[800px] bg-radial from-pastel-3/20  to-pastel-3/60 top-0 left-[50%]  translate-x-[-50%] z-1"></motion.div>
 {/* header */}
   <div className="flex flex-col items-center gap-8 max-w-[600px] mx-auto relative z-10 text-center">
     <motion.div variants={fadeUp} className='mx-auto' >

@@ -71,7 +71,7 @@ export default function FeatureHeroShowcase() {
           return prev + 1;
         }
 
-        // last → jump to first with backward motion
+        
         setDirection(-1);
         return 0;
       });
@@ -99,12 +99,14 @@ export default function FeatureHeroShowcase() {
     <div className="relative z-10 grid gap-5 max-w-[1000px] mx-auto">
 
       {/* ---------------- Image Track ---------------- */}
-      <div className="bg-pastel-3 border-4 rounded-xl border-gray-2/20 aspect-[1.5/1] overflow-hidden p-1">
+      <div className="border-4 rounded-xl border-gray-2/20">
+      
+      <div className="bg-pastel-3 rounded-xl  aspect-[1.5/1] overflow-hidden">
         <motion.div
           className="flex h-full"
           animate={{ x: translateX }}
           transition={{
-            duration: direction === 1 ? 0.55 : 0.8, // slightly longer when resetting back
+            duration: direction === 1 ? 0.55 : 0.8, 
             ease: "easeInOut"
           }}
         >
@@ -113,10 +115,11 @@ export default function FeatureHeroShowcase() {
               key={i}
               src={item.img}
               alt=""
-              className="w-full h-full object-cover shrink-0"
+              className="w-full h-full object-cover object-top-left shrink-0"
             />
           ))}
         </motion.div>
+      </div>
       </div>
 
       {/* ---------------- Pagination ---------------- */}

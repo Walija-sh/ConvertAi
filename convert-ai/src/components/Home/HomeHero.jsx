@@ -71,7 +71,7 @@ const scale = useSpring(rawScale, {
     >
      <motion.div 
              style={{scale}}
-             className="absolute hidden lg:block aspect-square rounded-full w-[800px] bg-radial from-pastel-3/20  to-pastel-3/60 top-7 left-[50%]  translate-x-[-50%] z-1"></motion.div>
+             className="absolute hidden lg:block aspect-square rounded-full w-[800px] bg-radial from-pastel-3/20  to-pastel-3/60 top-0 left-[50%]  translate-x-[-50%] z-1"></motion.div>
       <motion.div 
         className="flex flex-col items-center gap-8 w-full max-w-[500px] relative z-10"
        style={
@@ -111,13 +111,18 @@ const scale = useSpring(rawScale, {
               src='/Home/homeHero.png'
               alt="AI-powered CRM dashboard" 
               className="w-full h-auto"
+              loading="eager"
+  fetchpriority="high"
+  decoding="async"
             />
           </motion.div>
         </div>
 
         
         <div className="border-[6px] border-black-2 rounded-xl overflow-hidden transform-3d transition-all duration-300 lg:hidden">
-          <img src='/Home/homeHero.png' alt="AI-powered CRM dashboard" />
+          <img src='/Home/homeHero.png' alt="AI-powered CRM dashboard" loading="eager"
+  fetchpriority="high"
+  decoding="async" />
         </div>
 
         <motion.div  style={isDesktop ? { y: bottomTranslateY } : {y:0}} className="flex flex-col gap-8">

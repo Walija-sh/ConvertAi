@@ -15,9 +15,12 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiePolicy from "./pages/CookiePolicy";
 import Faq from "./pages/Faq";
 import ChangeLog from "./pages/ChangeLog.jsx";
+import ScrollToTop from "./components/common/ScrollToTop.jsx";
 
 const App = () => {
   return (
+    <>
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<MainLayout />}>
         {/* Core Pages */}
@@ -42,6 +45,7 @@ const App = () => {
         <Route path="*" element={<div>Page not found</div>} />
       </Route>
     </Routes>
+    </>
   );
 };
 
