@@ -112,7 +112,7 @@ const scale = useSpring(rawScale, {
               alt="AI-powered CRM dashboard" 
               className="w-full h-auto"
               loading="eager"
-  fetchpriority="high"
+ 
   decoding="async"
             />
           </motion.div>
@@ -121,7 +121,6 @@ const scale = useSpring(rawScale, {
         
         <div className="border-[6px] border-black-2 rounded-xl overflow-hidden transform-3d transition-all duration-300 lg:hidden">
           <img src='/Home/homeHero.png' alt="AI-powered CRM dashboard" loading="eager"
-  fetchpriority="high"
   decoding="async" />
         </div>
 
