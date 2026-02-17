@@ -10,13 +10,13 @@ const HomeHero = () => {
 
   const imageTranslateY = useTransform(
     scrollY,
-    [0, 400], 
-    ["0%", "-30%"]
+    [0, 200], 
+    ["0%", "-20%"]
   );
 
   const imageRotateX = useTransform(
     scrollY,
-    [0, 400],
+    [0, 200],
     [30, 0]
   );
 
@@ -28,16 +28,16 @@ const HomeHero = () => {
   const headerTranslateY = useTransform(
     scrollY,
     [0, 250],
-    ["0%", "100%"]
+    ["0%", "120%"]
   )
   const bottomTranslateY = useTransform(
     scrollY,
     [0, 900],
-    ["0%", "-150px"]
+    ["0%", "-40px"]
   )
   const imageScale = useTransform(
     scrollY,
-    [0, 500],
+    [0, 200],
     [0.8, 1]
   );
 
@@ -91,7 +91,7 @@ const scale = useSpring(rawScale, {
       {/* bottom */}
       <div 
         ref={targetRef}
-        className="flex flex-col gap-10 max-w-[1000px] mx-auto  relative z-10  w-full"
+        className="flex flex-col gap-10 max-w-[1000px] mx-auto  relative z-10   w-full"
       >
         <div className="hidden lg:block relative perspective-[1000px] ">
           
